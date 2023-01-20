@@ -2,12 +2,14 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import Bill from "./components/bill/Bill";
 import CardProduct from "./components/cardProduct/CardProduct";
-import ModalSaveBill from "./components/modals/ModalSaveBill";
+import ModalCharge from "./components/modal-charge/ModalCharge";
+import ModalSaveBill from "./components/modal-save-bill/ModalSaveBill";
 
 function App() {
   const [product, setProduct] = useState();
   const [chart, setChart] = useState([]);
   const [saveBill, setSaveBill] = useState(false);
+  const [charge, setCharge] = useState(false);
 
   useEffect(() => {
     fetch("http://localhost:3000/product")
@@ -20,6 +22,11 @@ function App() {
       <div className="modal-save">
         <ModalSaveBill saveBill={saveBill} setSaveBill={setSaveBill} />
       </div>
+
+      <div className="modal-charge">
+        <ModalCharge charge={charge} setCharge={setCharge} />
+      </div>
+
       <div className="container">
         <div className="left-wrapper">
           {product &&
@@ -35,7 +42,12 @@ function App() {
             })}
         </div>
         <div className="right-wrapper">
-          <Bill chart={chart} setChart={setChart} setSaveBill={setSaveBill} />
+          <Bill
+            chart={chart}
+            setChart={setChart}
+            setSaveBill={setSaveBill}
+            setCharge={setCharge}
+          />
         </div>
       </div>
     </div>

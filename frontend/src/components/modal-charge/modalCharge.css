@@ -1,0 +1,16 @@
+.modal-charge-wrapper {
+  position: absolute;
+  background-color: #fff;
+  padding: 30px;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+
+.modal-charge-wrapper.click {
+  scale: 100%;
+}
+.modal-charge-wrapper.nonClick {
+  scale: 0;
+}
