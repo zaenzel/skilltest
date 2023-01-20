@@ -6,42 +6,20 @@ import ModalSaveBill from "./components/modals/ModalSaveBill";
 
 function App() {
   const [product, setProduct] = useState();
-  const menu = [
-    {
-      id: 1,
-      name: "Cah Taoge",
-      price: 15000,
-    },
-    {
-      id: 2,
-      name: "Gurame Asam Mani",
-      price: 69000,
-    },
-
-    {
-      id: 3,
-      name: "Nasi Putih",
-      price: 0,
-    },
-
-    {
-      id: 4,
-      name: "Es Jeruk Nipis",
-      price: 20000,
-    },
-  ];
-
   const [chart, setChart] = useState([]);
+  const [saveBill, setSaveBill] = useState(false);
 
   useEffect(() => {
-    const res = fetch("http://localhost:3000/product")
+    fetch("http://localhost:3000/product")
       .then((res) => res.json())
       .then((res) => setProduct(res));
   }, []);
 
   return (
     <div className="app">
-      <ModalSaveBill />
+      <div className="modal-save">
+        <ModalSaveBill saveBill={saveBill} setSaveBill={setSaveBill} />
+      </div>
       <div className="container">
         <div className="left-wrapper">
           {product &&
@@ -57,7 +35,7 @@ function App() {
             })}
         </div>
         <div className="right-wrapper">
-          <Bill chart={chart} setChart={setChart} />
+          <Bill chart={chart} setChart={setChart} setSaveBill={setSaveBill} />
         </div>
       </div>
     </div>

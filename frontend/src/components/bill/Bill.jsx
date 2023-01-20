@@ -2,7 +2,7 @@ import "./bill.css";
 import { ImUser, ImList2 } from "react-icons/im";
 import { RiArrowDropDownLine, RiShoppingCart2Line } from "react-icons/ri";
 
-const Bill = ({ chart, setChart }) => {
+const Bill = ({ chart, setChart, setSaveBill }) => {
   const total = () => {
     let jml = 0;
     for (const elemen of chart) {
@@ -10,7 +10,6 @@ const Bill = ({ chart, setChart }) => {
     }
     return jml;
   };
-
 
   return (
     <div className="bill">
@@ -68,7 +67,14 @@ const Bill = ({ chart, setChart }) => {
       </div>
       <div className="bot-bill">
         <div className="btn-saveprint">
-          <button className="item-btn-saveprint">Save Bill</button>
+          <button
+            className="item-btn-saveprint"
+            onClick={(e) => {
+              setSaveBill(true);
+            }}
+          >
+            Save Bill
+          </button>
           <button className="item-btn-saveprint">Print Bill</button>
         </div>
         <div className="btn-charge">

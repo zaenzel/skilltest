@@ -1,0 +1,20 @@
+.modal-save-bill {
+  position: absolute;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgb(0, 192, 42);
+  color: white;
+  font-weight: 700;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0px 5px 5px rgb(73, 73, 73);
+  top: 20px;
+}
+
+.modal-save-bill.active {
+  scale: 100%;
+}
+
+.modal-save-bill.nonactive {
+  scale: 0;
+}
