@@ -11,6 +11,7 @@ const Bill = ({ chart, setChart }) => {
     return jml;
   };
 
+
   return (
     <div className="bill">
       <div className="top-bill">
