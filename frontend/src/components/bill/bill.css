@@ -1,0 +1,149 @@
+/* top */
+.top-bill {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon-wrap {
+  padding: 5px;
+  background-color: rgb(168, 203, 255);
+  text-align: center;
+  color: rgb(1, 68, 170);
+}
+
+.icon-wrap p {
+  font-size: 10px;
+}
+
+.icon-bill {
+  font-size: 32px;
+}
+
+/* center bill */
+
+.category-service {
+  background-color: #fff;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.dropdown-category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: rgb(228, 228, 228);
+  padding: 5px 0;
+}
+
+.dropdown-category p {
+  font-weight: 600;
+}
+
+.icon-drop {
+  font-size: 30px;
+  color: rgb(168, 203, 255);
+}
+
+.list-order {
+  padding: 15px;
+  background-color: #fff;
+}
+
+.view-table {
+  display: flex;
+  justify-content: space-between;
+}
+
+.view-table p {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(1, 68, 170);
+
+  margin-bottom: 20px;
+}
+
+.list-order-item {
+  display: flex;
+  font-weight: 600;
+  font-size: 14px;
+  justify-content: space-between;
+}
+
+.list-order-item p {
+  margin-bottom: 20px;
+}
+
+.ttl-order {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.item-ttl-order {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-ttl-order:nth-child(1) {
+  margin-bottom: 20px;
+}
+
+.reset-order {
+  margin: 5px 0;
+  text-align: center;
+  font-size: 14px;
+  padding: 15px;
+  background-color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  color: gray;
+}
+
+.empty {
+  background-color: #fff;
+  width: 100%;
+  height: 20px;
+}
+
+/* bottom bill */
+
+.btn-saveprint {
+  display: flex;
+  gap: 5px;
+}
+
+.item-btn-saveprint {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px;
+  width: 100%;
+  border: none;
+  background-color: rgba(168, 203, 255, 0.267);
+}
+
+.btn-charge {
+  display: flex;
+  cursor: pointer;
+  background-color: rgb(68, 0, 255);
+  color: #fff;
+  font-size: 25px;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+}
+
+.left-btn-charge {
+  flex: 2;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  border-right: 1px solid white;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.btn-charge p {
+  flex: 10;
+}

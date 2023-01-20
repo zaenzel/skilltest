@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  background-color: rgb(228, 228, 228);
+}
+
+.container {
+  padding: 16px;
+  display: flex;
+  gap: 40px;
+}
+
+.left-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  flex: 2;
+  height: fit-content;
+}
+
+.right-wrapper {
+  flex: 1;
+}
